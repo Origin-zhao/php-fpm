@@ -13,7 +13,7 @@ RUN  apt-get update && apt-get install --fix-missing -y \
         #&& docker-php-ext-enable memcached\
         && pecl install mcrypt-1.0.3 \
         && docker-php-ext-enable mcrypt \
-        && docker-php-ext-install -j$(nproc) iconv gd mysqli pdo pdo_mysql mysql \
+        && docker-php-ext-install -j$(nproc) iconv gd mysqli pdo pdo_mysql \
         #&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
         && pecl install xdebug && docker-php-ext-enable xdebug \
         && echo "Asia/Shanghai" > /etc/timezone \
