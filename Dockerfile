@@ -9,6 +9,7 @@ RUN  apt-get update && apt-get install --fix-missing -y \
         libmcrypt-dev \
         libpng-dev \
         libwebp-dev \
+        libxpm-dev \
         #libjpeg-turbo-dev \
         curl \
         && pecl install mcrypt-1.0.3 \
