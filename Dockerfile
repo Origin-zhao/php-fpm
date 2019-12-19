@@ -10,7 +10,7 @@ RUN  apt-get update && apt-get install --fix-missing -y \
         libpng-dev \
         libwebp-dev \
         libxpm-dev \
-        libonig2 \
+        libonig-dev \
         #libjpeg-turbo-dev \
         curl \
         && pecl install mcrypt-1.0.3 \
