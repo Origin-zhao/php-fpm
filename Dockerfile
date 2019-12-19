@@ -3,12 +3,12 @@ RUN  apt-get update && apt-get install --fix-missing -y \
         git \
         unzip \
         libxml2-dev \
+        libjpeg-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
         libpng-dev \
         libwebp-dev \
-        libjpeg-dev \
         #libjpeg-turbo-dev \
         curl \
         && pecl install mcrypt-1.0.3 \
