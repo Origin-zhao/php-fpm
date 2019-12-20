@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:7.3-fpm-buster
 RUN  apt-get update && apt-get install --fix-missing -y \
         git \
         unzip \
@@ -12,8 +12,7 @@ RUN  apt-get update && apt-get install --fix-missing -y \
         curl \
         && pecl install mcrypt-1.0.3 \
         && docker-php-ext-enable mcrypt \
-        #&& docker-php-ext-configure --with-gd  \
-        #--with-png-dir --with-jpeg-dir  --with-freetype-dir
+        && docker-php-ext-configure --with-gd --with-png-dir --with-jpeg-dir  --with-freetype-dir \
         && docker-php-ext-install -j$(nproc) iconv mysqli pdo pdo_mysql gd xml mbstring \
         && docker-php-ext-configure opcache --enable-opcache && docker-php-ext-install opcache \
         && pecl install xdebug && docker-php-ext-enable xdebug \
